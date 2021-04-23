@@ -134,8 +134,7 @@ if not prob:
 
 image_select = st.sidebar.selectbox(
     "Choose the background image",
-    ("Default", "Girl1", "Girl2", "Girl3", "Girl4", "Girl5", 
-        "Bg1", "Bg2", "Bg3", "Bg4", "Bg5", "Meme1")
+    ("default", "Bg1", "Bg2", "Bg3", "Bg4", "Bg5")
 )
 imageLocation.image(Image.open(image_path + image_select + '.jpg'))
 
