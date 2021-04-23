@@ -121,7 +121,7 @@ st.write("""Sentiment classification is the automated process of identifying opi
 """)
 
 imageLocation = st.empty()
-image_path = './images/'
+image_path = 'images/'
 # imageLocation.image(Image.open(image_path + 'default' + '.jpg'))
 st.write('Please enter a review in the left sidebar and see the results below: ')
 
