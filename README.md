@@ -1,4 +1,4 @@
-# Sentiment Classification App  [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://github.com/phonhay103/SentimentClassificationSunAI)
+# Sentiment Classification App  [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/phonhay103/sentimentclassificationsunai/main/app.py)
 Streamlit Web App to predict sentiment of a review
 
 ## Pre-requisites
