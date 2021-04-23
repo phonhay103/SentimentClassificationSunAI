@@ -1,8 +1,8 @@
 streamlit==0.77.0
 pandas_profiling==2.11.0
 streamlit-pandas-profiling==0.1.1
-numpy==1.19.2
-pandas==1.2.2
+numpy
+pandas
 joblib==1.0.1
 pillow==8.1.0
 matplotlib==3.3.4
