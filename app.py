@@ -127,10 +127,10 @@ st.write('Please enter a review in the left sidebar and see the results below: '
 
 sentence = st.sidebar.text_input('Enter a review here:')
 show_steps = st.sidebar.radio('Show steps:', options=[True, False], index=1)
-prob = st.sidebar.radio('Returns the predicted probability:', options=[True, False], index=0)
-if not prob:
-    threshold = st.sidebar.slider("Threshold prediction", 0.01, 0.99, 0.5, 0.01)
-    st.sidebar.text('Bad \t\t\t\t   Good')
+# prob = st.sidebar.radio('Returns the predicted probability:', options=[True, False], index=0)
+# if not prob:
+#     threshold = st.sidebar.slider("Threshold prediction", 0.01, 0.99, 0.5, 0.01)
+#     st.sidebar.text('Bad \t\t\t\t   Good')
 
 image_select = st.sidebar.selectbox(
     "Choose the background image",
@@ -157,7 +157,17 @@ if sentence:
         st.write(f'*Good: {1-predict:.2f}*')
         st.write(f'*Bad: {predict:.2f}*')
     else:
-        if predict < threshold:
-            st.write('***This is a good review***')
+#         if predict < threshold:
+#             st.write('***This is a good review***')
+#         else:
+#             st.write('***This is a bad review***')
+        if predict < 0.2:
+            st.write('*** This is a Very Good review ***')
+        elif predict < 0.4:
+            st.write('*** This is a Good review ***')
+        elif predict < 0.6:
+            st.write('*** This is a Neutral review ***')
+        elif predict < 0.8: 
+            st.write('*** This is a Bad review ***')
         else:
-            st.write('***This is a bad review***')
+            st.write('*** This is a Very Bad review ***')
