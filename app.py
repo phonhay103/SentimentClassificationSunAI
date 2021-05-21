@@ -152,22 +152,22 @@ if sentence:
 
     predict = model.predict(test_tokenizer)[0][0]
 
-    if prob:
-        st.write('**Probability predicted: **')
-        st.write(f'*Good: {1-predict:.2f}*')
-        st.write(f'*Bad: {predict:.2f}*')
-    else:
+#     if prob:
+#         st.write('**Probability predicted: **')
+#         st.write(f'*Good: {1-predict:.2f}*')
+#         st.write(f'*Bad: {predict:.2f}*')
+#     else:
 #         if predict < threshold:
 #             st.write('***This is a good review***')
 #         else:
 #             st.write('***This is a bad review***')
-        if predict < 0.2:
-            st.write('*** This is a Very Good review ***')
-        elif predict < 0.4:
-            st.write('*** This is a Good review ***')
-        elif predict < 0.6:
-            st.write('*** This is a Neutral review ***')
-        elif predict < 0.8: 
-            st.write('*** This is a Bad review ***')
-        else:
-            st.write('*** This is a Very Bad review ***')
+    if predict < 0.2:
+        st.write('*** This is a Very Good review ***')
+    elif predict < 0.4:
+        st.write('*** This is a Good review ***')
+    elif predict < 0.6:
+        st.write('*** This is a Neutral review ***')
+    elif predict < 0.8: 
+        st.write('*** This is a Bad review ***')
+    else:
+        st.write('*** This is a Very Bad review ***')
